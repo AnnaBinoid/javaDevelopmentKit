@@ -1,5 +1,6 @@
 package hw02JDK.client;
 
+import hw02JDK.server.Server;
 import sem02JDK.client.ClientView;
 
 import javax.swing.text.View;
@@ -24,7 +25,7 @@ public class Client {
         if (server.connectUser(this)) {
             showOnWindow("Вы успешно подключились!\n");
             connected = true;
-            String log = server.getHistory();
+            String log = server.getLog();
             if (log != null) {
                 showOnWindow(log);
             }
