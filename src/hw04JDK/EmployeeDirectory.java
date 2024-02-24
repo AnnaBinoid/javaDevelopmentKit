@@ -8,17 +8,11 @@ public class EmployeeDirectory {
     public List<Employee> employeeList = new ArrayList<>();
 
 
-// Добавить метод добавление нового сотрудника в справочник
+// Добавить метод добавления нового сотрудника в справочник
     public void addEmployee(int tableNumber, String name, String phoneNumber, int experience) {
         Employee newEmployee = new Employee(tableNumber, name, phoneNumber, experience);
         employeeList.add(newEmployee);
         System.out.println("A new employee has been successfully added " + newEmployee.toString());
-    }
-
-    public void checkNullList(ArrayList<Employee> employeeList) {
-        if (employeeList.isEmpty()){
-            System.out.println("This EmployeeList is empty.");
-        }
     }
 
 // Добавить метод, который ищет сотрудника по табельному номеру
